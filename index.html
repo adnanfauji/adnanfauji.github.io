@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Undangan Pernikahan - Kelompok 1 kelas malam Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <link href="style.css" rel="stylesheet">
+    </head>
+  <body>
+      <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+          <main>
+              <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
+              <h1>Kimingyu & Salsabila</h1>
+              <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+              <div class="time">
+                <div class="section">
+                  <p id="hari">00</p>
+                  <span>Hari</span>
+                </div>
+                <div class="section">
+                  <p id="jam">00</p>
+                  <span>Jam</span>
+                </div>
+                <div class="section">
+                  <p id="menit">00</p>
+                  <span>Menit</span>
+                </div>
+                <div class="section">
+                  <p id="detik">00</p>
+                  <span>Detik</span>
+                </div>
+              </div>
+            
+              <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()">Lihat Undangan</a>
+              
+            
+          </main>
+      </section>
+
+    <nav class="navbar navbar-expand-md bg-trasparent sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">KimSa</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">KimSa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto" >
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#info">Info</a>
+              <a class="nav-link" href="#story">Story</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" href="#rsvp">RSVP</a>
+              <a class="nav-link" href="#group">Group</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <section id="home" class="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2>Acara Pernikahan</h2>
+            <h3>Diselenggarakan pada 01 Januari 2025 di Karawang, Jawa Barat.</h3>
+            <p>Oleh karena itu dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu Saudara/i, untuk hadir pada acara pernikahan kami.</p>
+          </div> 
+        </div>
+        <div class="row couple">
+          <div class="col-lg-6">
+              <div class="row">
+                  <div class="col-8 text-end">
+                    <h3>Mingyu</h3>
+                    <p>Anak pertama dari 2 bersaudara </p>
+                    <p>Putra dari Bpk. Kim sok<br/>Ibu Kim woo</p>
+                  </div>
+                  <div class="col-4">
+                    <img src="img/gallery/thumbnail/mingyukecil.jpg" alt="mingyu" class="img-responsive rounded-circle">
+                  </div>
+              </div>
+          </div>
+
+          <span class="heart"><i class="bi bi-heart-fill"></i></span>
+
+          <div class="col-lg-6">
+            <div class="row">
+                <div class="col-4">
+                  <img src="img/gallery/thumbnail/cacakecil.jpg" alt="Salsabila" class="img-responsive rounded-circle">
+                </div>
+                <div class="col-8">
+                  <h3>Salsabila</h3>
+                  <p>Anak kedua dari 3 bersaudara </p>
+                  <p>Putra dari Bpk. Dian<br/>Ibu Desi</p>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="info">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Informasi Acara</h2>
+            <p>Alamat : Jl. Bougenville No.6A, Karawang Wetan, Kec. Karawang Tim., Karawang, Jawa Barat 41314</p>
+            <a href="https://maps.app.goo.gl/kzzp6WtDywS4mP14A" target="_blank" class="btn btn-light btn-sm my-3">Klik untuk membuka peta</a>
+            <p class="description">Di harapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak ada tanda-tanda sedang di langsungkan pernikahan, bisa jadi anda salah jadwal atau salah tempat.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light mb-5">
+              <div class="card-header">
+                Akad Nikah
+              </div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>08:00 - 10:00</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Senin, 01 Januari 2025</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan dan kekhusuan seluruh prosesi.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light">
+              <div class="card-header">
+                Resepsi
+              </div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>11:00 - Selesai</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Senin, 01 Januari 2025</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                Saat acara resepsi diharapkan untuk kondusif menjaga kekhidmatan dan kekhusuan seluruh prosesi.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story"> 
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>Bagaimana Cinta Kami Bersemi</span>
+            <h2>Cerita Kami</h2>
+            <p>Awal pertemuan sampai kejenjang yang lebih serius</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <ul class="timeline">
+                <li>
+                  <div class="timeline-image" style="background-image: url(img/Taman.jpg);"></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                    <h3>Pertama Bertemu</h3>
+                    <span> 5 Mei 2020 </span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Anyang - Korea Selatan</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-image" style="background-image: url(img/taman1.jpeg);"></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                    <h3>Mulai Serius</h3>
+                    <span> 1 Juni 2022 </span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Anyang - Korea Selatan</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="timeline-image" style="background-image: url(img/taman2.jpeg);"></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                    <h3>Tunangan</h3>
+                    <span> 22 Desember 2023 </span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Karawang - Indonesia</p>
+                    </div>
+                  </div>
+                </li>
+              </div> 
+            </ul>
+          </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>Memory Kisah Kami</span>
+            <h2>Gallery Foto</h2>
+            <p>Beberapa foto pengantin</p>
+          </div>
+        </div>
+        <div class="row row-cols-md-3 row-col-sm-2 row-col-1">
+          <div class="col mt-3">
+            <a href="img/weeding.jpg" data-toggle="lightbox" data-caption="image1">
+              <img src="img/weeding.jpg" alt="image1" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a href="img/bunga1.jpg" data-toggle="lightbox" data-caption="image2">
+              <img src="img/bunga1.jpg" alt="image2" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a href="img/weeding2.jpg" data-toggle="lightbox" data-caption="image3">
+              <img src="img/weeding2.jpg" alt="image3" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a href="img/weeding3.jpg" data-toggle="lightbox" data-caption="image4">
+              <img src="img/weeding3.jpg" alt="image4" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a href="img/bunga2.jpg" data-toggle="lightbox" data-caption="image5">
+              <img src="img/bunga2.jpg" alt="image5" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a href="img/weeding4.jpg" data-toggle="lightbox" data-caption="image6">
+              <img src="img/weeding4.jpg" alt="image6" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a href="img/wedding5.jpeg" data-toggle="lightbox" data-caption="image7">
+              <img src="img/wedding5.jpeg" alt="image7" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a href="img/bunga3.jpeg" data-toggle="lightbox" data-caption="image8">
+              <img src="img/bunga3.jpeg" alt="image8" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a href="img/wedding6.jpeg" data-toggle="lightbox" data-caption="image9">
+              <img src="img/wedding6.jpeg" alt="image9" class="img-fluid w-100 rounded">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+         
+            <h2>Konfirmasi   Kehadiran</h2>
+            <p>Isi form dibawah ini untuk melakukan konfirmasi kehadiran.</p>
+          </div>
+        </div>
+        <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST" 
+        action="https://script.google.com/macros/s/AKfycbyxCfjOksM3DYQ6hd7DOEVTL2hYURrahhBwHxh1rBZG6iUv696iVcoG7tASSVQSiZgNVQ/exec" id="my-form">
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama" name="nama">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="jumlah" class="form-label">Jumlah</label>
+              <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="5" length="1" value="1">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <label for="status" class="form-label">Konfirmasi</label>
+              <select name="status" id="status" class="form-select">
+                <option selected>Pilih salah satu</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak Hadir">Tidak Hadir</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12" style="margin-top: 35px;">
+            <button class="btn btn-primary">Kirim</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="group" class="group">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>Ungkapan Tanda Kasih</span>
+            <h2>Kelompok 1 Kelas Malam</h2>
+            <p>Nama Kelompok beserta NIM </p>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="fw-bold">Ketua</div>
+                4337857201230023-Salsabila Intan Anjani
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">Anggota</div>
+                4337857201230009-Annisa Nur Baiti
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">Anggota</div>
+                4337857201230049-Iman Fauzi
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">Anggota</div>
+                4337857201230002-Adnan Fauji
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <small class="block">&copy; 2023 Kimsa Wedding. All rights Reserved.</small>
+            <small class="block">Design by <a href="">Kelompok 1, Kelas Malam</a></small>
+
+            <ul class="mt-3">
+              <li>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-tiktok"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="audio/Westlife -  Beautiful in white.mp3" type="audio/mp3">
+      </audio>
+      <div class="audio-icon-wraper" style="display: none;">
+        <i class="bi bi-pause-circle"></i>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    
+    <script>
+      var countDownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+      var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var hari = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var jam = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var menit = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var detik = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("hari").innerHTML = hari;
+        document.getElementById("jam").innerHTML = jam;
+        document.getElementById("menit").innerHTML = menit;
+        document.getElementById("detik").innerHTML = detik;
+
+        if(distance < 0){
+          clearInterval(x);
+          document.getElementById("hari").innerHTML = "00";
+          document.getElementById("jam").innerHTML = "00";
+          document.getElementById("menit").innerHTML = "00";
+          document.getElementById("detik").innerHTML = "00";
+        }
+
+      },1000); 
+    </script>
+    <script>
+     
+      const stickyTop = document.querySelector('.sticky-top');
+      const offcanvas = document.querySelector('.offcanvas');
+      
+      offcanvas.addEventListener('show.bs.offcanvas', function(){
+        stickyTop.style.overflow = 'visible';
+      });
+      
+      offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'hidden';
+      });
+    </script>
+
+    <script>
+      
+      const rootElement = document.querySelector(":root");
+      const audioIconWraper = document.querySelector('.audio-icon-wraper');
+      const audioIcon = document.querySelector('.audio-icon-wraper i');
+      const song = document.querySelector('#song');
+      let isPlaying = false;
+      
+      function disableScroll(){
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        
+        window.onscroll = function(){
+          window.scrollTo(scrollTop, scrollLeft);
+        }
+        
+        rootElement.style.scrollBehavior = 'auto';
+      }
+      function enableScroll(){
+        window.onscroll = function(){}
+          rootElement.style.scrollBehavior = 'smooth';
+          // localStorage.setItem('opened', 'true');
+          playAudio();
+      }
+
+      function playAudio(){ 
+        song.volume = 0.4;
+        audioIconWraper.style.display = 'flex';
+        song.play();
+        isPlaying = true;
+      }
+
+      audioIconWraper.onclick = function(){
+        if (isPlaying){
+          song.pause();
+          audioIcon.classList.remove('bi-disc');
+          audioIcon.classList.add('bi-pause-circle');
+        }else{
+          song.play();
+          audioIcon.classList.add('bi-disc');
+          audioIcon.classList.remove('bi-pause-circle');
+        }
+        isPlaying = !isPlaying;  
+      }
+
+      disableScroll();
+    </script>
+
+    <script>
+      window.addEventListener("load", function() {
+          const form = document.getElementById('my-form');
+          form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+              method: 'POST',
+              body: data,
+            })
+            .then(() => {
+              alert("Konfirmasi kehadiran berhasil terkirim!");
+            })
+          });
+        });
+    </script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get('n') || " ";
+      const pronoun = urlParams.get('p') || "Bapak/Ibu/Sadara/i, ";
+      const namaContainer = document.querySelector('.hero h4 span')
+      namaContainer.innerText = pronoun+" "+nama;
+      
+      document.querySelector('#nama').value = nama;
+    </script>
+
+  </body>
+</html>
