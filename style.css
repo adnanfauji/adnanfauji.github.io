@@ -381,6 +381,11 @@ footer {
     background-color: var(--pink);
     color: white;
 }
+footer .block {
+    display: flex;
+    justify-content: center;
+}
+
 footer a {
     color: var(--bg);
     font-weight: bold;
