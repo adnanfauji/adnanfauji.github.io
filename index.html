@@ -320,8 +320,10 @@
               </select>
             </div>
           </div>
-          <div class="col-12" style="margin-top: 35px;">
-            <button class="btn btn-primary">Kirim</button>
+          <div class="col-12">
+            <div class="mb-3">
+              <button class="btn btn-primary">Kirim</button>
+            </div>
           </div>
         </form>
       </div>
@@ -365,7 +367,7 @@
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <small class="block">&copy; 2023 Kimsa Wedding. All rights Reserved.</small>
+            <small class="block">&copy; 2023 Kimsa Wedding. All rights Reserved</small>
             <small class="block"><span>Design by <a href=""> Kelompok 1, Kelas Malam</a></span></small>
 
             <ul class="mt-3">
@@ -504,7 +506,8 @@
             })
             .then(() => {
               alert("Konfirmasi kehadiran berhasil terkirim!");
-            })
+              form.reset();
+            });
           });
         });
         function validateForm(form) {

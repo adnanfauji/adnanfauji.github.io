@@ -437,10 +437,21 @@ footer li{
     transform: translateX(-50%) translateY(64px);
     }
 }
+/* Laptop L */
+@media(max-width: 1200px){
+
+}
 /* Laptop */
+.rsvp .col-12 .btn-primary {
+    margin-top: 33px;
+}
 @media(max-width: 1024px){
     html{
         font-size: 75%;
+    }
+
+    .rsvp .col-12 .btn-primary {
+        margin-top: 26px;
     }
     .time div .time div p {
         padding: 15px;
@@ -504,6 +515,11 @@ footer li{
     .fixed-top {
         overflow:hidden;
     }
+
+    .rsvp .col-12 .btn-primary {
+        margin-top: 23px;
+    }
+
     .timeline li .timeline-panel{
         width: 60%;
         transform: translateX(-10px);
