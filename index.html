@@ -492,6 +492,10 @@
           const form = document.getElementById('my-form');
           form.addEventListener("submit", function(e) {
             e.preventDefault();
+            if (!validateForm(form)) {
+            alert("Harap isi semua kolom sebelum mengklik submit!");
+            return;
+            }
             const data = new FormData(form);
             const action = e.target.action;
             fetch(action, {
@@ -503,6 +507,28 @@
             })
           });
         });
+        function validateForm(form) {
+        let isValid = true;
+
+        // Tambahkan logika validasi untuk setiap kolom yang wajib diisi
+        const namaInput = form.querySelector('[name="nama"]');
+        const jumlahInput = form.querySelector('[name="jumlah"]');
+        const statusInput = form.querySelector('[name="status"]');
+
+        if (namaInput && namaInput.value.trim() === '') {
+            isValid = false;
+        }
+
+        if (jumlahInput && (jumlahInput.value === '' || parseInt(jumlahInput.value) < 1 || parseInt(jumlahInput.value) > 5)) {
+            isValid = false;
+        }
+
+        if (statusInput && statusInput.value === 'Pilih salah satu') {
+            isValid = false;
+        }
+
+        return isValid;
+        } 
     </script>
 
     <script>
